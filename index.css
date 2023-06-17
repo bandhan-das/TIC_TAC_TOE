@@ -1,0 +1,111 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: orange
+}
+#board{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    cursor: pointer;
+    position: static;
+}
+.title{
+    color: currentColor;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-border{
+    border-right: 0.2em solid indigo;
+}
+.bottom-border{
+    border-bottom: 0.2em solid indigo;
+}
+.strike{
+    position:absolute;
+    background-color: darkred;
+}
+.strike-row-1{
+    width: 20%;
+    height: 4px;
+    top: 21%;
+}
+.strike-row-2{
+    width: 20%;
+    height: 4px;
+    top: 37%;
+}
+.strike-row-3{
+    width: 20%;
+    height: 4px;
+    top: 54%;
+}
+.strike-column-1{
+    height: 48%;
+    width: 4px;
+    left: 42.4%;
+}
+.strike-column-2{
+    height: 48%;
+    width: 4px;
+    left: 49.5%;
+}
+.strike-column-3{
+    height: 48%;
+    width: 4px;
+    left: 57.2%;
+}
+.strike-diagonal-1{
+    width: 22%;
+    height: 4px;
+    top: 40%;
+    left: 40%;
+    transform: skewY(45deg);
+}
+.strike-diagonal-2{
+    width: 22%;
+    height: 4px;
+    top: 40%;
+    left: 38%;
+    transform: skewY(-45deg);
+}
+h1{
+    color: greenyellow;
+}
+#game-over-area {
+    text-align: center;
+    border: indigo 8px solid;
+    padding: 50px;
+    width: 50%;
+    margin-top: 50px;
+}
+h2{
+    color: greenyellow;
+    font-size: 3em;
+    margin-top: 0px;
+}
+button{
+    background-color: transparent;
+    color:greenyellow;
+    border: greenyellow 1px solid;
+    padding: 10px;
+    font-size: 1.5em;    
+}
+.hidden{
+    display: none;
+}
+.visible{
+    display: block;
+}
+.x-hover:hover::after{
+    content:"X";
+    opacity: 0.4;
+}
+.o-hover:hover::after{
+    content:"0";
+    opacity: 0.4;
+}
